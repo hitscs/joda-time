@@ -46,24 +46,24 @@ Various documentation is available:
 
 
 ### Releases
-[Release 2.9.3](http://www.joda.org/joda-time/download.html) is the current latest release.
+[Release 2.9.9](http://www.joda.org/joda-time/download.html) is the current latest release.
 This release is considered stable and worthy of the 2.x tag.
 It depends on JDK 1.5 or later.
 
-Available in the [Maven Central repository](http://search.maven.org/#artifactdetails|joda-time|joda-time|2.9.3|jar)
+Available in the [Maven Central repository](http://search.maven.org/#artifactdetails|joda-time|joda-time|2.9.9|jar)
 
 **Maven configuration:**
 ```xml
 <dependency>
   <groupId>joda-time</groupId>
   <artifactId>joda-time</artifactId>
-  <version>2.9.3</version>
+  <version>2.9.9</version>
 </dependency>
 ```
 
 **Gradle configuration:**
 ```groovy
-compile 'joda-time:joda-time:2.9.3'
+compile 'joda-time:joda-time:2.9.9'
 ```
 
 ### Related projects
@@ -83,3 +83,12 @@ Please use GitHub issues and Pull Requests for support.
 ### History
 Issue tracking and active development is at GitHub.
 Historically, the project was at [Sourceforge](https://sourceforge.net/projects/joda-time/).
+
+
+### Release process
+
+* Update version (pom.xml, README.md, index.md, MANIFEST.MF, changes.xml)
+* Commit and push
+* `mvn clean deploy -Doss.repo -Dgpg.passphrase=""`
+* Release project in [Nexus](https://oss.sonatype.org)
+* Website will be built and released by Travis
